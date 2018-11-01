@@ -1,0 +1,84 @@
+﻿<Window x:Class="WPF_SimpleCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_SimpleCalculator"
+        mc:Ignorable="d"
+        Title="Calculator" Height="392" Width="668">
+    <Grid x:Name="wrapper">
+
+        <Label Content="Shared Cost Calculator" Margin="260,5,0,0" VerticalAlignment="Top" FontSize="36" HorizontalAlignment="Left" Width="375"/>
+        <Image x:Name="snow" HorizontalAlignment="Left" Height="343" Margin="5,5,0,0" VerticalAlignment="Top" Width="250" Source="Resources/kitchen.jpg" Stretch="UniformToFill"/>
+        <StackPanel x:Name="pan_purchases" HorizontalAlignment="Left" Margin="260,99,0,0" VerticalAlignment="Top" Orientation="Horizontal">
+            <RadioButton x:Name="rb_one" Content="One" FontSize="16" Margin="5,0" IsChecked="True" Checked="AmountCheck"/>
+            <RadioButton x:Name="rb_two" Content="Two" FontSize="16" Margin="5,0" Checked="AmountCheck"/>
+            <RadioButton x:Name="rb_three" Content="Three" FontSize="16" Margin="5,0" Checked="AmountCheck"/>
+        </StackPanel>
+        <Label x:Name="lbl_purchases" Content="No. Purchases" HorizontalAlignment="Left" Margin="260,68,0,0" VerticalAlignment="Top" FontSize="18" Height="36" Width="184"/>
+        <Label x:Name="lbl_roomates" Content="No. Roomates" HorizontalAlignment="Left" Margin="487,68,0,0" VerticalAlignment="Top" FontSize="18" Height="36" Width="148"/>
+        <ComboBox x:Name="cb_roomates" HorizontalAlignment="Left" Margin="487,99,0,0" VerticalAlignment="Top" Width="118" Height="20" SelectedIndex="0">
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
+            <ComboBoxItem Content="4"/>
+        </ComboBox>
+        <Grid x:Name="grd_one" Height="55" Margin="260,124,0,0" VerticalAlignment="Top" Width="400" HorizontalAlignment="Left">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label x:Name="lbl_price1" Content="Price $" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label x:Name="lbl_quantity1" Content="Quantity #" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label x:Name="lbl_discount1" Content="Discount %" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="tb_price1" PreviewTextInput="PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="0,1,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="0"/>
+            <TextBox x:Name="tb_quantity1" PreviewTextInput="PreviewTextInput" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="0,1,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="0"/>
+            <TextBox x:Name="tb_discount1" PreviewTextInput="PreviewTextInput" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="0,1,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="0"/>
+        </Grid>
+        <Grid x:Name="grd_two" Height="55" Margin="260,184,0,0" VerticalAlignment="Top" Width="400" HorizontalAlignment="Left" Visibility="Collapsed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label x:Name="lbl_price2" Content="Price $" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label x:Name="lbl_quantity2" Content="Quantity #" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label x:Name="lbl_discount2" Content="Discount %" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="tb_price2" PreviewTextInput="PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="0,1,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="0"/>
+            <TextBox x:Name="tb_quantity2" PreviewTextInput="PreviewTextInput" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="0,1,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="0"/>
+            <TextBox x:Name="tb_discount2" PreviewTextInput="PreviewTextInput" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="0,1,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="0"/>
+        </Grid>
+        <Grid x:Name="grd_three" Height="55" Margin="260,244,0,0" VerticalAlignment="Top" Width="400" HorizontalAlignment="Left" Visibility="Collapsed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="133*"/>
+                <ColumnDefinition Width="134*"/>
+                <ColumnDefinition Width="133*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label x:Name="lbl_price3" Content="Price $" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label x:Name="lbl_quantity3" Content="Quantity #" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label x:Name="lbl_discount3" Content="Discount %" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="tb_price3" PreviewTextInput="PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="0,1,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="0"/>
+            <TextBox x:Name="tb_quantity3" PreviewTextInput="PreviewTextInput" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="0,1,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="0"/>
+            <TextBox x:Name="tb_discount3" PreviewTextInput="PreviewTextInput" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="0,1,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="0"/>
+        </Grid>
+        <StackPanel HorizontalAlignment="Left" Height="43" Margin="260,305,0,0" VerticalAlignment="Top" Width="390" Orientation="Horizontal">
+            <Button x:Name="butt_calculate" Content="Calculate" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Height="43" Margin="5,0" Click="butt_calculate_Click"/>
+            <Button x:Name="butt_reset" Content="Reset" HorizontalAlignment="Left" VerticalAlignment="Top" Width="97" Height="43" Margin="5,0" Click="butt_reset_Click"/>
+            <Button x:Name="butt_help" Content="Help" HorizontalAlignment="Left" VerticalAlignment="Top" Width="74" Height="43" Margin="5,0" Click="butt_help_Click"/>
+            <Button x:Name="butt_exit" Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="74" Height="43" Margin="5,0" Click="butt_exit_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

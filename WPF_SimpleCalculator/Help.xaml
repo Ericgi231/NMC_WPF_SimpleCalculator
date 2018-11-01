@@ -1,0 +1,14 @@
+﻿<Window x:Class="WPF_SimpleCalculator.Help"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_SimpleCalculator"
+        mc:Ignorable="d"
+        Title="Help" Height="310.924" Width="505.042">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="This calculator is used to determine how much each roomate should pay for shared goods."/><LineBreak/><Run Text="1. Select the ammount of items purchased in the top left"/><LineBreak/><Run Text="2. Select number of roomates in the top right"/><LineBreak/><Run Text="3. Enter the individual price and quantity of each item purchased"/><LineBreak/><Run Text="4. Set the discount percent for any items you have coupons for"/><LineBreak/><Run Text="is used to determine how much each roomate should pay for shared goods."/><LineBreak/><Run Text="1. Select the ammount of items purchased in the top left"/><LineBreak/><Run Text="2. Select number of roomates in the top right"/><LineBreak/><Run Text="3. Enter the individual price and quantity of each item purchased"/><LineBreak/><Run Text="4. Set the discount percent for any items you have coupons for"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+        <Button x:Name="butt_close" Content="Close" HorizontalAlignment="Left" Margin="10,207,0,0" VerticalAlignment="Top" Width="112" Height="63" Click="butt_close_Click"/>
+
+    </Grid>
+</Window>
